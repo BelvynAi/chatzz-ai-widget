@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --text-primary: #1c244b;
+  --text-secondary: #6c757d;
+  --accent: #00a19b;
+  --accent-hover: #008a80;
+  --user-bubble: #eaeaea;
+  --assistant-bubble: #f5f5f5;
+  --border: #1c244b;
+  --shadow: rgba(0, 0, 0, 0.2);
+  --belvyn-brand: #4015b1;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .bg-chatzz-primary {
+    background-color: var(--bg-primary);
+  }
+  .bg-chatzz-secondary {
+    background-color: var(--bg-secondary);
+  }
+  .text-chatzz-primary {
+    color: var(--text-primary);
+  }
+  .text-chatzz-secondary {
+    color: var(--text-secondary);
+  }
+  .bg-accent {
+    background-color: var(--accent);
+  }
+  .bg-accent-hover {
+    background-color: var(--accent-hover);
+  }
+  .bg-user-bubble {
+    background-color: var(--user-bubble);
+  }
+  .bg-assistant-bubble {
+    background-color: var(--assistant-bubble);
+  }
+  .border-chatzz {
+    border-color: var(--border);
+  }
+  .text-belvyn-brand {
+    color: var(--belvyn-brand);
+  }
+
+  .chatzz-shadow {
+    box-shadow: 0 4px 20px var(--shadow);
+  }
+
+  .chatzz-glow {
+    box-shadow: 0 0 20px rgba(0, 161, 155, 0.3);
+  }
+}
