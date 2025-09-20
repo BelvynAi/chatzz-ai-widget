@@ -2,7 +2,7 @@
   // Prevent multiple initializations
   if (window.ChatzzChat) return
 
-  const WIDGET_URL = "https://chatzz-ai-widget.vercel.app"
+  const WIDGET_URL = "https://chatzz-ai-widget.vercel.app/widget"
 
   // Create the floating button
   function createFloatingButton() {
