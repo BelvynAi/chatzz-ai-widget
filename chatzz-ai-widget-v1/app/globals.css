@@ -3,22 +3,22 @@
 @tailwind utilities;
 
 :root {
-  --bg-primary: #ffffff;
-  --bg-secondary: #f8f9fa;
+  --bg-primary: #f2f3f5;
+  --bg-secondary: #ffffff;
   --text-primary: #1c244b;
   --text-secondary: #6c757d;
   --accent: #00a19b;
   --accent-hover: #008a80;
   --user-bubble: #eaeaea;
-  --assistant-bubble: #f5f5f5;
-  --border: #1c244b;
-  --shadow: rgba(0, 0, 0, 0.2);
+  --assistant-bubble: #ffffff;
+  --border: transparent;
+  --shadow: rgba(0, 0, 0, 0.1);
   --belvyn-brand: #4015b1;
 }
 
 @layer base {
   * {
-    @apply border-border;
+    /* border-border removed */
   }
   body {
     @apply bg-background text-foreground;
