@@ -458,7 +458,15 @@ export default function ChatzzWidget() {
             Privacy
           </a>
           <span>
-            Powered by <span className="text-belvyn-brand">Belvyn</span>
+            Powered by{" "}
+            <a
+              href="https://belvynai.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-belvyn-brand hover:text-belvyn-brand/80 transition-colors duration-200 underline decoration-transparent hover:decoration-current"
+            >
+              Belvyn
+            </a>
           </span>
         </div>
       </div>
