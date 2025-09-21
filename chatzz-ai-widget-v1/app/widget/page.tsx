@@ -277,7 +277,7 @@ export default function ChatzzWidget() {
   return (
     <div className="relative flex flex-col h-screen bg-chatzz-primary text-chatzz-primary font-sans">
       {/* Header */}
-      <div className="flex items-center justify-between p-4 bg-chatzz-primary border-b border-chatzz chatzz-shadow">
+      <div className="flex items-center justify-between p-4 bg-chatzz-secondary chatzz-shadow">
         <h1 className="text-lg font-semibold text-chatzz-primary">Chatzz AI Assistant</h1>
         <div className="flex items-center gap-2">
           <button
@@ -318,7 +318,7 @@ export default function ChatzzWidget() {
                 <Button
                   key={index}
                   variant="outline"
-                  className="bg-chatzz-secondary border-chatzz hover:bg-gray-100 text-chatzz-primary text-left justify-start h-auto p-3 rounded-2xl transition-all duration-200"
+                  className="bg-chatzz-secondary hover:bg-gray-100 text-chatzz-primary text-left justify-start h-auto p-3 rounded-2xl transition-all duration-200"
                   onClick={() => handleStarterPrompt(prompt)}
                   role="listitem"
                 >
@@ -339,8 +339,8 @@ export default function ChatzzWidget() {
               <div
                 className={`p-3 rounded-2xl ${
                   message.role === "user"
-                    ? "bg-user-bubble text-chatzz-primary border border-chatzz"
-                    : "bg-assistant-bubble text-chatzz-primary border border-gray-200"
+                    ? "bg-user-bubble text-chatzz-primary"
+                    : "bg-assistant-bubble text-chatzz-primary"
                 } chatzz-shadow transition-all duration-200`}
                 role={message.role === "assistant" ? "status" : undefined}
                 aria-label={message.role === "assistant" ? "Assistant response" : "Your message"}
@@ -363,7 +363,7 @@ export default function ChatzzWidget() {
           <div className="flex justify-start">
             <div className="max-w-[80%] space-y-1">
               <div
-                className="bg-assistant-bubble text-chatzz-primary p-3 rounded-2xl chatzz-shadow border border-gray-200"
+                className="bg-assistant-bubble text-chatzz-primary p-3 rounded-2xl chatzz-shadow"
                 role="status"
                 aria-label="Assistant is typing"
               >
@@ -391,15 +391,12 @@ export default function ChatzzWidget() {
 
         {error && (
           <div className="flex justify-center">
-            <div
-              className="bg-red-50 border border-red-200 text-red-700 p-3 rounded-2xl max-w-md text-center chatzz-shadow"
-              role="alert"
-            >
+            <div className="bg-red-50 text-red-700 p-3 rounded-2xl max-w-md text-center chatzz-shadow" role="alert">
               <p className="text-sm mb-2">{error}</p>
               <Button
                 variant="outline"
                 size="sm"
-                className="bg-red-100 border-red-300 text-red-700 hover:bg-red-200"
+                className="bg-red-100 text-red-700 hover:bg-red-200"
                 onClick={retryLastMessage}
               >
                 Retry
@@ -412,7 +409,7 @@ export default function ChatzzWidget() {
       </div>
 
       {/* Fixed Input Section */}
-      <div className="absolute bottom-0 left-0 right-0 bg-chatzz-primary p-4 border-t border-chatzz chatzz-shadow">
+      <div className="absolute bottom-0 left-0 right-0 bg-chatzz-secondary p-4 chatzz-shadow">
         <form onSubmit={handleSubmit} className="flex gap-2">
           <div className="flex-1 relative">
             <textarea
@@ -422,7 +419,7 @@ export default function ChatzzWidget() {
               onKeyDown={handleKeyDown}
               placeholder="Type your message..."
               disabled={isLoading}
-              className="w-full bg-chatzz-secondary border border-chatzz text-chatzz-primary placeholder-chatzz-secondary rounded-2xl px-4 py-3 pr-12 resize-none min-h-[48px] max-h-[120px] focus:outline-none focus:ring-2 focus:ring-accent/50 transition-all duration-200"
+              className="w-full bg-chatzz-primary text-chatzz-primary placeholder-chatzz-secondary rounded-2xl px-4 py-3 pr-12 resize-none min-h-[48px] max-h-[120px] focus:outline-none focus:ring-2 focus:ring-accent/50 transition-all duration-200"
               rows={1}
               style={{
                 height: "auto",
