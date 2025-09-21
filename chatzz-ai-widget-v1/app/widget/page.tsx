@@ -338,9 +338,7 @@ export default function ChatzzWidget() {
             <div className="max-w-[80%] space-y-1">
               <div
                 className={`p-3 rounded-2xl ${
-                  message.role === "user"
-                    ? "bg-user-bubble text-chatzz-primary"
-                    : "bg-assistant-bubble text-chatzz-primary"
+                  message.role === "user" ? "bg-user-bubble text-white" : "bg-assistant-bubble text-chatzz-primary"
                 } chatzz-shadow transition-all duration-200`}
                 role={message.role === "assistant" ? "status" : undefined}
                 aria-label={message.role === "assistant" ? "Assistant response" : "Your message"}
